@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-900 via-cyan-700 to-blue-900 flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+    <h2 class="text-2xl font-bold text-center text-blue-900 mb-6">
+        Career Connect
+    </h2>
+
+    <p class="text-center mb-5 text-gray-600">
+        Help & Support Questions
+    </p>
+
+    <!-- FAQ 1 -->
+    <div class="mb-3">
+        <button class="question w-full text-left p-3 bg-blue-700 text-white rounded">
+            How can I register on the portal?
+        </button>
+
+        <p class="answer hidden p-3 bg-cyan-50">
+            Select the Register option and enter your basic details, email, and password to create an account.
+        </p>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="mb-3">
+        <button class="question w-full text-left p-3 bg-blue-700 text-white rounded">
+            How can I find available jobs?
+        </button>
+
+        <p class="answer hidden p-3 bg-cyan-50">
+            Visit the Jobs section and search for opportunities using job title, company, skills, or location.
+        </p>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="mb-3">
+        <button class="question w-full text-left p-3 bg-blue-700 text-white rounded">
+            How can I submit my application?
+        </button>
+
+        <p class="answer hidden p-3 bg-cyan-50">
+            Select your preferred job and click on Apply Now to submit your application details.
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+    // Get all questions
+    let questions = document.querySelectorAll(".question");
+
+    // Add click event to each question
+    questions.forEach(function(question) {
+
+        question.addEventListener("click", function() {
+
+            // Get the answer
+            let answer = question.nextElementSibling;
+
+            // Show / Hide answer
+            answer.classList.toggle("hidden");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
